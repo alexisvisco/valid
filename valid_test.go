@@ -4,9 +4,9 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"testing"
 	"github.com/alexisvisco/valid"
 	"github.com/alexisvisco/valid/is"
+	"testing"
 
 	"github.com/goforj/godump"
 
@@ -273,7 +273,7 @@ func TestRename(t *testing.T) {
 	t.Run("exact match → translated", func(t *testing.T) {
 		t.Parallel()
 		ve := &valid.Error{Fields: []valid.FieldError{
-			{Path: "Reference", Code: "REQUIRED"},
+			{Path: "Reference", Code: "VALIDATION_REQUIRED"},
 		}}
 		got := ve.Rename(map[string]string{"Reference": "reference"})
 		require.NotNil(t, got)
@@ -284,8 +284,8 @@ func TestRename(t *testing.T) {
 	t.Run("wildcard match → indices substituted", func(t *testing.T) {
 		t.Parallel()
 		ve := &valid.Error{Fields: []valid.FieldError{
-			{Path: "Items.0.Name", Code: "REQUIRED"},
-			{Path: "Items.2.Quantity", Code: "MIN"},
+			{Path: "Items.0.Name", Code: "VALIDATION_REQUIRED"},
+			{Path: "Items.2.Quantity", Code: "VALIDATION_MIN"},
 		}}
 		got := ve.Rename(map[string]string{
 			"Items.*.Name":     "items.*.name",
@@ -300,7 +300,7 @@ func TestRename(t *testing.T) {
 	t.Run("no match → fallback to original path", func(t *testing.T) {
 		t.Parallel()
 		ve := &valid.Error{Fields: []valid.FieldError{
-			{Path: "Internal.Field", Code: "REQUIRED"},
+			{Path: "Internal.Field", Code: "VALIDATION_REQUIRED"},
 		}}
 		got := ve.Rename(map[string]string{"Other": "other"})
 		require.NotNil(t, got)
@@ -311,8 +311,8 @@ func TestRename(t *testing.T) {
 	t.Run("partial match — unmatched fields keep original path", func(t *testing.T) {
 		t.Parallel()
 		ve := &valid.Error{Fields: []valid.FieldError{
-			{Path: "Reference", Code: "REQUIRED"},
-			{Path: "Internal.Only", Code: "REQUIRED"},
+			{Path: "Reference", Code: "VALIDATION_REQUIRED"},
+			{Path: "Internal.Only", Code: "VALIDATION_REQUIRED"},
 		}}
 		got := ve.Rename(map[string]string{"Reference": "reference"})
 		require.NotNil(t, got)

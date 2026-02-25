@@ -178,32 +178,32 @@ Each rule reports a violation code (e.g. `REQUIRED`, `MIN`, `EMAIL`) and a defau
 
 | Signature | Code | Accepted types | Description |
 |---|---|---|---|
-| `is.Required` | `REQUIRED` | any | Fails if value is nil, zero, or `None` |
-| `is.NotEmpty` | `NOT_EMPTY` | string, slice, array, map | Fails if `len(value) == 0` |
-| `is.Min(n T)` | `MIN` | integer, float | `value >= n` |
-| `is.Max(n T)` | `MAX` | integer, float | `value <= n` |
-| `is.Between(min, max T)` | `BETWEEN` | integer, float | `min <= value <= max` |
-| `is.Positive` | `POSITIVE` | integer, float | `value > 0` |
-| `is.NonNegative` | `NON_NEGATIVE` | integer, float | `value >= 0` |
-| `is.GreaterThan(n T)` | `GT` | integer, float | `value > n` |
-| `is.GreaterThanOrEqual(n T)` | `GTE` | integer, float | `value >= n` |
-| `is.LessThan(n T)` | `LT` | integer, float | `value < n` |
-| `is.LessThanOrEqual(n T)` | `LTE` | integer, float | `value <= n` |
-| `is.Equal(target T)` | `EQ` | comparable | `value == target` |
-| `is.MinLength(n int)` | `MIN_LENGTH` | string | `len(value) >= n` |
-| `is.MaxLength(n int)` | `MAX_LENGTH` | string | `len(value) <= n` |
-| `is.Length(min, max int)` | `LENGTH` | string | `min <= len(value) <= max` |
-| `is.HasPrefix(s string)` | `HAS_PREFIX` | string | Value starts with `s` |
-| `is.HasSuffix(s string)` | `HAS_SUFFIX` | string | Value ends with `s` |
-| `is.Contains(elem T)` | `CONTAINS` | string (substring), slice, array | Value contains `elem` |
-| `is.Matches(pattern string)` | `MATCHES` | string | Value matches regex pattern |
-| `is.Alpha` | `ALPHA` | string | Only letters `[a-zA-Z]` |
-| `is.Alphanumeric` | `ALPHANUMERIC` | string | Only letters and digits `[a-zA-Z0-9]` |
-| `is.Numeric` | `NUMERIC` | string | Numeric text, e.g. `"123"`, `"-4.5"` |
-| `is.Email` | `EMAIL` | string | Valid email address |
-| `is.URL` | `URL` | string | Valid URL |
-| `is.UUID` | `UUID` | string | Valid UUID (case-insensitive) |
-| `is.OneOf(values ...T)` | `ONE_OF` | comparable | Value is one of the allowed values |
+| `is.Required` | `VALIDATION_REQUIRED` | any | Fails if value is nil, zero, or `None` |
+| `is.NotEmpty` | `VALIDATION_NOT_EMPTY` | string, slice, array, map | Fails if `len(value) == 0` |
+| `is.Min(n T)` | `VALIDATION_MIN` | integer, float | `value >= n` |
+| `is.Max(n T)` | `VALIDATION_MAX` | integer, float | `value <= n` |
+| `is.Between(min, max T)` | `VALIDATION_BETWEEN` | integer, float | `min <= value <= max` |
+| `is.Positive` | `VALIDATION_POSITIVE` | integer, float | `value > 0` |
+| `is.NonNegative` | `VALIDATION_NON_NEGATIVE` | integer, float | `value >= 0` |
+| `is.GreaterThan(n T)` | `VALIDATION_GT` | integer, float | `value > n` |
+| `is.GreaterThanOrEqual(n T)` | `VALIDATION_GTE` | integer, float | `value >= n` |
+| `is.LessThan(n T)` | `VALIDATION_LT` | integer, float | `value < n` |
+| `is.LessThanOrEqual(n T)` | `VALIDATION_LTE` | integer, float | `value <= n` |
+| `is.Equal(target T)` | `VALIDATION_EQ` | comparable | `value == target` |
+| `is.MinLength(n int)` | `VALIDATION_MIN_LENGTH` | string | `len(value) >= n` |
+| `is.MaxLength(n int)` | `VALIDATION_MAX_LENGTH` | string | `len(value) <= n` |
+| `is.Length(min, max int)` | `VALIDATION_LENGTH` | string | `min <= len(value) <= max` |
+| `is.HasPrefix(s string)` | `VALIDATION_HAS_PREFIX` | string | Value starts with `s` |
+| `is.HasSuffix(s string)` | `VALIDATION_HAS_SUFFIX` | string | Value ends with `s` |
+| `is.Contains(elem T)` | `VALIDATION_CONTAINS` | string (substring), slice, array | Value contains `elem` |
+| `is.Matches(pattern string)` | `VALIDATION_MATCHES` | string | Value matches regex pattern |
+| `is.Alpha` | `VALIDATION_ALPHA` | string | Only letters `[a-zA-Z]` |
+| `is.Alphanumeric` | `VALIDATION_ALPHANUMERIC` | string | Only letters and digits `[a-zA-Z0-9]` |
+| `is.Numeric` | `VALIDATION_NUMERIC` | string | Numeric text, e.g. `"123"`, `"-4.5"` |
+| `is.Email` | `VALIDATION_EMAIL` | string | Valid email address |
+| `is.URL` | `VALIDATION_URL` | string | Valid URL |
+| `is.UUID` | `VALIDATION_UUID` | string | Valid UUID (case-insensitive) |
+| `is.OneOf(values ...T)` | `VALIDATION_ONE_OF` | comparable | Value is one of the allowed values |
 
 ## Optional values
 
