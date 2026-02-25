@@ -3,7 +3,7 @@ package is
 import (
 	"context"
 	"regexp"
-	"valid/ishelper"
+	"github.com/alexisvisco/valid/ishelper"
 )
 
 var numericRegex = regexp.MustCompile(`^[-+]?[0-9]+(?:\.[0-9]+)?$`)

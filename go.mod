@@ -1,4 +1,4 @@
-module valid
+module github.com/alexisvisco/valid
 
 go 1.26
 

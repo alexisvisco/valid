@@ -3,7 +3,7 @@ package is
 import (
 	"context"
 	"reflect"
-	"valid/ishelper"
+	"github.com/alexisvisco/valid/ishelper"
 )
 
 // Length returns a Rule that reports a violation when the length of the value

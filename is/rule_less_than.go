@@ -2,7 +2,7 @@ package is
 
 import (
 	"context"
-	"valid/ishelper"
+	"github.com/alexisvisco/valid/ishelper"
 )
 
 // LessThan returns a Rule that reports a violation when value is >= limit.

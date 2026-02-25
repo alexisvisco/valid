@@ -3,7 +3,7 @@ package is
 import (
 	"context"
 	"reflect"
-	"valid/ishelper"
+	"github.com/alexisvisco/valid/ishelper"
 )
 
 // MaxLength returns a Rule that reports a violation when len(value) > n.

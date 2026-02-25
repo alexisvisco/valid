@@ -3,7 +3,7 @@ package is
 import (
 	"context"
 	"math/big"
-	"valid/ishelper"
+	"github.com/alexisvisco/valid/ishelper"
 )
 
 // Positive is a Rule that reports a violation when value is <= 0.

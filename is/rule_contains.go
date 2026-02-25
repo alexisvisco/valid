@@ -4,7 +4,7 @@ import (
 	"context"
 	"reflect"
 	"strings"
-	"valid/ishelper"
+	"github.com/alexisvisco/valid/ishelper"
 )
 
 // Contains returns a Rule that reports a violation when the value does not

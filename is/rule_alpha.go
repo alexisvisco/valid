@@ -3,7 +3,7 @@ package is
 import (
 	"context"
 	"regexp"
-	"valid/ishelper"
+	"github.com/alexisvisco/valid/ishelper"
 )
 
 var alphaRegex = regexp.MustCompile(`^[a-zA-Z]+$`)

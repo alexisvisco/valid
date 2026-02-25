@@ -5,8 +5,8 @@ import (
 	"errors"
 	"fmt"
 	"testing"
-	"valid"
-	"valid/is"
+	"github.com/alexisvisco/valid"
+	"github.com/alexisvisco/valid/is"
 
 	"github.com/goforj/godump"
 

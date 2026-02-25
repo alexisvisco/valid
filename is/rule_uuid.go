@@ -3,7 +3,7 @@ package is
 import (
 	"context"
 	"regexp"
-	"valid/ishelper"
+	"github.com/alexisvisco/valid/ishelper"
 )
 
 var uuidRegex = regexp.MustCompile(`^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$`)

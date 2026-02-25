@@ -2,7 +2,7 @@ package is
 
 import (
 	"context"
-	"valid/ishelper"
+	"github.com/alexisvisco/valid/ishelper"
 )
 
 // Equal returns a Rule that reports a violation when value is not equal to target.

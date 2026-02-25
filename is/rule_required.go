@@ -3,7 +3,7 @@ package is
 import (
 	"context"
 	"reflect"
-	"valid/ishelper"
+	"github.com/alexisvisco/valid/ishelper"
 )
 
 // Required reports a violation when the value is absent or zero.

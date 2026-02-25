@@ -3,7 +3,7 @@ package is
 import (
 	"context"
 	"testing"
-	"valid/ishelper"
+	"github.com/alexisvisco/valid/ishelper"
 
 	"github.com/stretchr/testify/require"
 )

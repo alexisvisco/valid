@@ -2,7 +2,7 @@ package is
 
 import (
 	"context"
-	"valid/ishelper"
+	"github.com/alexisvisco/valid/ishelper"
 )
 
 // Max returns a Rule that reports a violation when the numeric value is strictly

@@ -3,7 +3,7 @@ package is
 import (
 	"context"
 	"regexp"
-	"valid/ishelper"
+	"github.com/alexisvisco/valid/ishelper"
 )
 
 // Matches returns a Rule that reports a violation when value does not match pattern.

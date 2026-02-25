@@ -3,7 +3,7 @@ package is
 import (
 	"context"
 	"net/url"
-	"valid/ishelper"
+	"github.com/alexisvisco/valid/ishelper"
 )
 
 // URL reports a violation when value is not an absolute URL string.

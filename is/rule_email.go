@@ -3,7 +3,7 @@ package is
 import (
 	"context"
 	"net/mail"
-	"valid/ishelper"
+	"github.com/alexisvisco/valid/ishelper"
 )
 
 // Email reports a violation when value is not a valid email address string.

@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"reflect"
 	"strings"
-	"valid/is"
+	"github.com/alexisvisco/valid/is"
 )
 
 // FieldError represents a single field validation error.

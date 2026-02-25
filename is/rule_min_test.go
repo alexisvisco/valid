@@ -6,7 +6,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	"valid/ishelper"
+	"github.com/alexisvisco/valid/ishelper"
 )
 
 func TestMin(t *testing.T) {

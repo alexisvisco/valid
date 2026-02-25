@@ -3,7 +3,7 @@ package is
 import (
 	"context"
 	"strings"
-	"valid/ishelper"
+	"github.com/alexisvisco/valid/ishelper"
 )
 
 // HasSuffix returns a Rule that reports a violation when the string value does

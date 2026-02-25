@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	"valid/ishelper"
+	"github.com/alexisvisco/valid/ishelper"
 )
 
 func TestHasSuffix(t *testing.T) {

@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 	"strings"
-	"valid/ishelper"
+	"github.com/alexisvisco/valid/ishelper"
 )
 
 // OneOf returns a Rule that reports a violation when value is not one of allowed.
