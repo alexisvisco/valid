@@ -207,18 +207,21 @@ Each rule reports a violation code (e.g. `REQUIRED`, `MIN`, `EMAIL`) and a defau
 
 ## Optional values
 
-Most rules support optional values through `valid/ishelper`:
+Most rules support optional field values. If your type implements the `Optional` interface, rules will detect presence or absence automatically:
 
 ```go
-import "valid/ishelper"
-
-optName := ishelper.None[string]()
-optQty  := ishelper.Some(10)
+type Optional interface {
+    IsSome() bool
+    IsNone() bool
+}
 ```
 
+Additionally, if your type has an `Unwrap() T` method, constraint rules will validate the inner value when present.
+
 Behavior:
-- `None` skips most constraint rules (field is absent)
-- `is.Required` fails on `None`
+- `IsNone() == true` — skips most constraint rules (field is absent)
+- `IsNone() == true` — `is.Required` still fails (absence is a violation)
+- `IsSome() == true` — unwraps and validates the inner value
 
 ## Run tests
 
